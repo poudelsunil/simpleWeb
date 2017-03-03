@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <head>
   <title>
     simple web
   </title>
-
   <script type="text/javascript">
     var print=function(){
       console.log("Hello World");
@@ -11,8 +12,12 @@
   </script>
 </head>
 <body>
-  <h1>Hello world in Web</h1>
-
-  <input type="button" name="btnPrint" onclick="javascript:print();" value="Click here">
+  <div ng-app="">
+    <h1>Hello world in Web</h1>
+    <p>Type you name:<input type="text" name="txtName" ng-model="name"> </p><br/>
+    <h2>Hello {{name}}</h2>
+    
+    <input type="button" name="btnPrint" onclick="javascript:print();" value="Click here">
+  </div>
 </body>
 </html>
